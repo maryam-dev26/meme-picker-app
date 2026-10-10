@@ -1,0 +1,207 @@
+html, body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+/*typography*/
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h1, h2{
+    color: #EED6D3;
+    margin: 0;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3{
+    margin: 25px;
+}
+
+/* layout */
+
+header{
+    background-color: #67595E;
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 370px;
+    gap: 15px;
+    padding: 10px 0 0 0;
+}
+
+.pumpkin-img{
+    width: 80px;
+}
+
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0px auto;
+}
+
+/* controls */
+
+.emotion-radios{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+}
+
+.radio{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bcbcbc;
+    padding: 4px 8px;
+}
+
+label{
+    font-size: 14px;
+    padding: 3px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.highlight{
+    background-color: #fff0ee;
+    color: #bd301d;
+    font-weight: bold;
+}
+
+.radio:last-child{
+    border-bottom: 0;
+}
+
+input[type="radio"]{
+    cursor: pointer;
+}
+
+.gifs-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
+.gifs-check-label{
+    width: unset;
+    margin-right: 5px;
+}
+
+.get-image-btn{
+    background-color: #67595e;
+    color: #eed6d3;
+    padding: 15px 19px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+/* modal */
+
+.meme-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); 
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.cat-img{
+    max-width: 340px;
+    max-height: 420px;
+    border-radius: 5px;
+}
+
+.meme-modal-close-btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+}
+
+.meme-modal-close-btn:hover{
+    color: white;
+    background-color: #bd301d;
+    border: 2px solid #bd301d;
+}
+
+#meme-modal-inner {
+    background-color: #fff0ee;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #67595e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: modalAppear 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cat-img {
+    max-width: 320px;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.get-image-btn {
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.get-image-btn:hover:not(:disabled) {
+    background-color: #53474c;
+    transform: translateY(-2px);
+}
+
+.get-image-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px; 
+    transition: background-color 0.15s ease;
+    cursor: pointer;
+}
+
+.radio:hover:not(.highlight) {
+    background-color: #f7ebe9;
+}
